@@ -13,5 +13,6 @@ RUN mkdir /app && \
         --create-perl-command-shortcut @prove \
         --install-module Encode \
         --install-module Crypt::SSLeay \
+        --install-module JSON::XS \
         --install-module Unicode::Normalize && \
-    rm -fr deps
+    rm -fr deps local/perlbrew/build
