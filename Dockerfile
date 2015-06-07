@@ -7,7 +7,8 @@ RUN apt-get update && \
 RUN mkdir /app && \
     cd app && \
     curl https://wakaba.github.io/packages/pmbp | sh && \
-    perl local/bin/pmbp.pl --perl-version latest --install-perl \
+    perl local/bin/pmbp.pl \
+        --perl-version latest --perl-relocatable --install-perl \
         --create-perl-command-shortcut @perl \
         --create-perl-command-shortcut @prove \
         --install-module Encode \
