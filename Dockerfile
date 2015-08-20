@@ -1,7 +1,7 @@
 FROM debian:sid
 
 RUN apt-get update && \
-    DEBIAN_FRONTEND="noninteractive" apt-get -y install git wget curl make perl gcc build-essential libssl-dev && \
+    DEBIAN_FRONTEND="noninteractive" apt-get -y install sudo git wget curl make perl gcc build-essential libssl-dev && \
     rm -rf /var/lib/apt/lists/*
 
 RUN mkdir /app && \
