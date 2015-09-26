@@ -4,7 +4,7 @@ RUN apt-get update && \
     DEBIAN_FRONTEND="noninteractive" apt-get -y install sudo git wget curl make gcc build-essential libssl-dev && \
     rm -rf /var/lib/apt/lists/*
 
-RUN wget https://cpan.metacpan.org/authors/id/R/RJ/RJBS/perl-5.22.0.tar.gz && \
+RUN wget https://cpan.metacpan.org/authors/id/R/RJ/RJBS/perl-`curl https://raw.githubusercontent.com/wakaba/perl-setupenv/master/version/perl.txt`.tar.gz && \
     tar zvxf perl-*.tar.gz && \
     cd perl-* && \
     sh Configure -de -A ccflags=-fPIC -Duserelocatableinc -Dusethreads -Dman1dir=none -Dman3dir=none && \
