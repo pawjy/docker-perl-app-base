@@ -21,6 +21,7 @@ RUN mkdir /app && \
         --install-module Encode \
         --install-module Crypt::SSLeay \
         --install-module JSON::XS \
-        --install-module Unicode::Normalize && \
+        --install-module Unicode::Normalize \
+        --install-module AnyEvent && \
     rm -fr deps local/perlbrew/build && \
     PMBP_VERBOSE=10 perl local/bin/pmbp.pl
