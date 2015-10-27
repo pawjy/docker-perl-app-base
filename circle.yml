@@ -4,10 +4,10 @@ machine:
 dependencies:
   override:
     - docker info
-    - docker build -t quay.io/wakaba/perl-app-base .
+    - docker build -t quay.io/wakaba/docker-perl-app-base .
 test:
   override:
-    - docker run quay.io/wakaba/perl-app-base /app/perl -v
+    - docker run quay.io/wakaba/docker-perl-app-base /app/perl -v
 deployment:
   hub:
     branch: master
