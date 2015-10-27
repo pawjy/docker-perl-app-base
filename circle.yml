@@ -7,7 +7,7 @@ dependencies:
     - docker build -t quay.io/wakaba/perl-app-base .
 test:
   override:
-    - docker run /app/perl -v
+    - docker run quay.io/wakaba/perl-app-base /app/perl -v
 deployment:
   hub:
     branch: master
