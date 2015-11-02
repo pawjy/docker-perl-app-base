@@ -9,6 +9,7 @@ RUN wget https://cpan.metacpan.org/authors/id/R/RJ/RJBS/perl-`curl https://raw.g
     cd perl-* && \
     sh Configure -de -A ccflags=-fPIC -Duserelocatableinc -Dusethreads -Dman1dir=none -Dman3dir=none && \
     make -j 4 all install && \
+    cd .. && \
     rm -fr perl-*
 
 RUN mkdir /app && \
