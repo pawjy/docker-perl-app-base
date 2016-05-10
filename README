@@ -1,5 +1,7 @@
 docker-perl-app-base
 ~~~~~~~~~~~~~~~~~~~~
 
-docker run wakaba/docker-perl-app-base
 docker run quay.io/wakaba/docker-perl-app-base
+  Debian stable + Perl
+docker run quay.io/wakaba/docker-perl-app-base:sid
+  Debian sid + Perl
