@@ -21,9 +21,10 @@ RUN mkdir /app && \
         --create-perl-command-shortcut @perl \
         --create-perl-command-shortcut @prove \
         --install-module Encode \
-        --install-module Crypt::SSLeay \
+        --install-module Net::SSLeay \
         --install-module JSON::XS \
         --install-module Unicode::Normalize \
-        --install-module AnyEvent && \
+        --install-module AnyEvent \
+        --dump-info-file-before-die && \
     rm -fr deps local/perlbrew/build && \
     PMBP_VERBOSE=10 perl local/bin/pmbp.pl
