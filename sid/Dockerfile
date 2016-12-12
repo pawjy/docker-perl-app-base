@@ -24,6 +24,7 @@ RUN mkdir /app && \
         --install-module JSON::XS \
         --install-module Unicode::Normalize \
         --install-module AnyEvent \
+        --execute-system-package-installer \
         --dump-info-file-before-die && \
     rm -fr deps local/perlbrew/build && \
     PMBP_VERBOSE=10 perl local/bin/pmbp.pl
