@@ -19,6 +19,9 @@ RUN mkdir /app && \
         --perl-version latest --perl-relocatable --install-perl \
         --create-perl-command-shortcut @perl \
         --create-perl-command-shortcut @prove \
+        --execute-system-package-installer \
+        --dump-info-file-before-die && \
+    ./perl local/bin/pmbp.pl \
         --install-module Encode \
         --install-module Net::SSLeay \
         --install-module JSON::XS \
