@@ -11,8 +11,8 @@ test:
     - docker run quay.io/wakaba/docker-perl-app-base /app/perl -v
     - docker run quay.io/wakaba/docker-perl-app-base:sid /app/perl -v
 
-    - docker run quay.io/wakaba/docker-perl-app-base bash -c 'git clone https://github.com/manakai/perl-web-resource /res && mv /res/.git /app/ && cd /app && make test-real'
-    - docker run quay.io/wakaba/docker-perl-app-base:sid bash -c 'git clone https://github.com/manakai/perl-web-resource /res && mv /res/.git /app/ && cd /app && make test-real'
+    - docker run quay.io/wakaba/docker-perl-app-base bash -c 'git clone https://github.com/manakai/perl-web-resource /res && mv /res/.git /app/ && cd /app && git reset --hard && make test-real'
+    - docker run quay.io/wakaba/docker-perl-app-base:sid bash -c 'git clone https://github.com/manakai/perl-web-resource /res && mv /res/.git /app/ && cd /app && git reset --hard && make test-real'
 
 deployment:
   hub:
