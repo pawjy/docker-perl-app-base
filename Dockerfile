@@ -1,5 +1,4 @@
-#FROM debian:sid
-FROM debian
+FROM quay.io/wakaba/docker-base:stable
 
 RUN apt-get update && \
     DEBIAN_FRONTEND="noninteractive" apt-get -y install sudo git wget curl make gcc build-essential libssl-dev && \
@@ -32,3 +31,5 @@ RUN mkdir /app && \
         --dump-info-file-before-die && \
     rm -fr deps local/perlbrew/build && \
     PMBP_VERBOSE=10 perl local/bin/pmbp.pl
+
+## License: Public Domain.
