@@ -1,4 +1,5 @@
-FROM quay.io/wakaba/base:sid
+#FROM quay.io/wakaba/base:sid
+FROM debian:sid
 
 RUN apt-get update && \
     DEBIAN_FRONTEND="noninteractive" apt-get -y install sudo git wget curl make gcc build-essential libssl-dev && \
