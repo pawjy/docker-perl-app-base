@@ -1,4 +1,4 @@
-FROM quay.io/wakaba/docker-base:stable
+FROM quay.io/wakaba/base:stable
 
 RUN apt-get update && \
     DEBIAN_FRONTEND="noninteractive" apt-get -y install sudo git wget curl make gcc build-essential libssl-dev && \
