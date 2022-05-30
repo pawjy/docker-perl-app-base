@@ -17,17 +17,16 @@ RUN mkdir /app && \
     curl -f -L https://wakaba.github.io/packages/pmbp | sh && \
     perl local/bin/pmbp.pl \
         --perl-version latest --perl-relocatable --install-perl \
-        --create-perl-command-shortcut @perl \
-        --create-perl-command-shortcut @prove \
-        --execute-system-package-installer \
-        --dump-info-file-before-die && \
-    ./perl local/bin/pmbp.pl \
         --install-module Encode \
         --install-module Net::SSLeay \
         --install-module JSON::XS \
         --install-module Unicode::Normalize \
         --install-module AnyEvent \
+        --create-perl-command-shortcut @perl \
+        --create-perl-command-shortcut @prove \
         --execute-system-package-installer \
         --dump-info-file-before-die && \
     rm -fr deps local/perlbrew/build && \
     PMBP_VERBOSE=10 perl local/bin/pmbp.pl
+
+## License: Public Domain.
