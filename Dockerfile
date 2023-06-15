@@ -27,6 +27,7 @@ RUN mkdir /app && \
         --execute-system-package-installer \
         --dump-info-file-before-die && \
     rm -fr deps local/perlbrew/build && \
-    PMBP_VERBOSE=10 perl local/bin/pmbp.pl
+    PMBP_VERBOSE=10 perl local/bin/pmbp.pl && \
+    date > /created.perl-app-base
 
 ## License: Public Domain.
