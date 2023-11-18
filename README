@@ -1,7 +1,23 @@
 docker-perl-app-base
 ~~~~~~~~~~~~~~~~~~~~
 
+* Usage
+
 docker run quay.io/wakaba/docker-perl-app-base
   Debian stable + Perl
 docker run quay.io/wakaba/docker-perl-app-base:sid
   Debian sid + Perl
+
+* History
+
+This GitHub repository was known as
+<https://github.com/wakaba/docker-perl-app-base> until 18 November
+2023.
+
+* Author
+
+Wakaba <wakaba@suikawiki.org>.
+
+* License
+
+See |./LICENSE|.
