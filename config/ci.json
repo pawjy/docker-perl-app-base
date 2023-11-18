@@ -1,9 +1,13 @@
 {
-  "circleci": {
-    "docker-build": "quay.io/wakaba/docker-perl-app-base",
+  "github": {
+    "build": [
+      {"docker_build": "quay.io/wakaba/docker-perl-app-base"}
+    ],
     "tests": [
       "docker run quay.io/wakaba/docker-perl-app-base /app/perl -v",
-      "docker run quay.io/wakaba/docker-perl-app-base bash -c 'git clone https://github.com/manakai/perl-web-resource /res && mv /res/.git /app/ && cd /app && git reset --hard && (make test-real || WEBUA_DEBUG=2 make test-real)'"
+      "docker run quay.io/wakaba/docker-perl-app-base bash -c 'git clone https://github.com/manakai/perl-web-resource /res && mv /res/.git /app/ && cd /app && git reset --hard && (make test-real || WEBUA_DEBUG=2 make test-real)'",
+
+      {"docker_push": "quay.io/wakaba/docker-perl-app-base"}
     ],
     "merger": true,
     "gaa": true,
