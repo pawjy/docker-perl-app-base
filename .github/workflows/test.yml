@@ -98,7 +98,7 @@
                "run" : "mkdir -p $CIRCLE_ARTIFACTS"
             },
             {
-               "run" : "docker build -t quay\u005C.io\u005C/wakaba\u005C/docker\u005C-perl\u005C-app\u005C-base \u005C."
+               "run" : "docker build --cache-from quay\u005C.io\u005C/wakaba\u005C/docker\u005C-perl\u005C-app\u005C-base -t quay\u005C.io\u005C/wakaba\u005C/docker\u005C-perl\u005C-app\u005C-base \u005C."
             },
             {
                "run" : "docker run quay.io/wakaba/docker-perl-app-base /app/perl -v"
